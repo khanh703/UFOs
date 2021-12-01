@@ -1,4 +1,4 @@
-# UFO Sitings
+# UFO Sightings
 
 ## Overview 
 
