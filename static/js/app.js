@@ -32,7 +32,7 @@ function updateFilters() {
 
     // 4a. Save the element that was changed as a variable.
     changedEl = this;
-
+    //changedEl = d3.select(this);
     // 4b. Save the value that was changed as a variable.
     elementVal = changedEl.value
 
@@ -70,10 +70,16 @@ function updateFilters() {
   }
   
   // 2. Attach an event to listen for changes to each filter
+  /*
+  d3.selectAll("#datetime").on("input", updateFilters);
   d3.selectAll("#city").on("input", updateFilters);
   d3.selectAll("#state").on("input", updateFilters);
   d3.selectAll("#country").on("input", updateFilters);
   d3.selectAll("#shape").on("input", updateFilters);
+  */
   
+  // 2. Attempt #2
+  d3.selectAll('input').on("change", updateFilters);
+
   // Build the table when the page loads
   buildTable(tableData);
